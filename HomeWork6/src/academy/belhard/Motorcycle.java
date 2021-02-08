@@ -1,22 +1,23 @@
 package academy.belhard;
 
-public class Motorcycle extends Vehicle implements Costable{
+public class Motorcycle extends Vehicle implements Costable {
     private int maxSpeed;
     private int value;
-    public Motorcycle (int wheelCount, int maxSpeed){
+
+    public Motorcycle(int wheelCount, int maxSpeed) {
         super(wheelCount);
-        this.maxSpeed=maxSpeed;
+        this.maxSpeed = maxSpeed;
     }
-    public Motorcycle (int wheelCount, int maxSpeed,int value){
+
+    public Motorcycle(int wheelCount, int maxSpeed, int value) {
         super(wheelCount);
-        this.maxSpeed=maxSpeed;
-        this.value=value;
+        this.maxSpeed = maxSpeed;
+        this.value = value;
     }
 
     @Override
     protected void printInfo() {
-        super.printInfo();
-        System.out.println("Мотоцикл - "+"Количество колес: "+wheelCount+" - Максимальная скорость: "+maxSpeed+ " - Цена: "+getCost());
+        System.out.println("Транспортное средство: Мотоцикл - " + "Количество колес: " + wheelCount + " - Максимальная скорость: " + maxSpeed + " - Цена: " + getCost());
     }
 
     @Override
